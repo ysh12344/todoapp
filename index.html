@@ -8,7 +8,8 @@
 </head>
 <body>
     <div id="app">
-        <h1>Todo App</h1>
+        <h1>TodoList App</h1>
+        <div>할일 작성후 엔터입력하십시오.</div>
         <input type="text" 
         v-model="inputText"
         v-on:keyup.enter="addItem">
@@ -48,6 +49,7 @@
                         var value = localStorage.key(i);
                         console.log(value);
                         this.todoItems.push(value);
+                        this.inputText='';
                     }
                     //axios.get('/todos')
                 },
